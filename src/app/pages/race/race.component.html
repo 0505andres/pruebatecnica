@@ -1,7 +1,7 @@
 <section class="race">
   <div class="container">
     <mat-form-field class="form_input">
-      <input matInput placeholder="Buscar Raza" [(ngModel)]="strBusqueda" name="busqueda" (keyup)="buscarRaza()">
+      <input matInput placeholder="Buscar Raza" [(ngModel)]="strBusqueda" name="busqueda" (keyup)="buscarRaza($event)">
     </mat-form-field>
   </div>
   <mat-card class="card" *ngFor="let item of respuesta">

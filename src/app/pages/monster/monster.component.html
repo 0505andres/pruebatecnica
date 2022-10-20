@@ -1,7 +1,7 @@
 <section class="monster">
   <div class="container">
     <mat-form-field class="form_input">
-      <input matInput placeholder="Buscar Monstruo" [(ngModel)]="strBusqueda" name="busqueda" (keyup)="buscarMonstruo()">
+      <input matInput placeholder="Buscar Monstruo" [(ngModel)]="strBusqueda" name="busqueda" (keyup)="buscarMonstruo($event)">
     </mat-form-field>
   </div>
   <mat-card class="card" *ngFor="let item of respuesta" >
