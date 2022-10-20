@@ -1,0 +1,33 @@
+<section class="monster">
+  <div class="container">
+    <mat-form-field class="form_input">
+      <input matInput placeholder="Buscar Monstruo" [(ngModel)]="strBusqueda" name="busqueda" (keyup)="buscarMonstruo()">
+    </mat-form-field>
+  </div>
+  <mat-card class="card" *ngFor="let item of respuesta" >
+    <mat-card-header> <mat-card-title>{{ item.name }}</mat-card-title></mat-card-header>
+    <mat-card-content> 
+      <mat-chip-list class="mat-chip-list-stacked" aria-orientation="vertical">
+        <mat-chip>Size:{{ item.capabilities.size }}</mat-chip>
+        <mat-chip>Type:{{ item.capabilities.type }}</mat-chip>
+        <mat-chip>Alignment:{{ item.capabilities.alignment }}</mat-chip>
+      </mat-chip-list>
+      <br>
+      <button mat-flat-button color="accent" matBadge="{{ item.capabilities.armor_class }}" matBadgePosition="after above" matBadgeColor="primary" matBadgeOverlap="true">Armor</button> &nbsp;&nbsp;
+      <button mat-flat-button color="accent" matBadge="{{ item.capabilities.hit_points }}" matBadgePosition="after above" matBadgeColor="primary"  matBadgeSize="large" matBadgeOverlap="true">Hit Points</button>&nbsp;&nbsp;
+      <button mat-flat-button color="accent" matBadge="{{ item.capabilities.hit_dice }}" matBadgePosition="after above" matBadgeColor="primary"  matBadgeSize="large" matBadgeOverlap="true">Hit Dice</button>&nbsp;&nbsp;
+      <button mat-flat-button color="accent" matBadge="{{ item.capabilities.strength }}" matBadgePosition="after above" matBadgeColor="primary" matBadgeOverlap="true">Strenght</button>&nbsp;
+      <br>
+      <mat-divider></mat-divider>
+      
+      <mat-list>
+        <mat-list-item>Dexterity: {{ item.capabilities.dexterity }}</mat-list-item>
+        <mat-list-item>Constitution:{{ item.capabilities.constitution }}</mat-list-item>
+        <mat-list-item>Intelligence:{{ item.capabilities.intelligence }}</mat-list-item>
+        <mat-list-item>Languages:{{ item.capabilities.languages }}</mat-list-item>
+        <mat-list-item>XP: {{ item.capabilities.xp }}</mat-list-item>
+       </mat-list>
+    </mat-card-content>
+    
+  </mat-card>
+</section>

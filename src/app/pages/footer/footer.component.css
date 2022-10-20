@@ -1,0 +1,41 @@
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  position: fixed;
+  bottom: 0;
+  height: 3.5rem;
+  width: 100%;
+  background-color:  #EF770A;
+}
+
+footer div {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+footer p {
+  color: #fefefe;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+footer a{
+  color: #786AE5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}

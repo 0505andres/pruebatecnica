@@ -1,0 +1,39 @@
+.card {
+    margin: 10px;
+    min-height: 658px;
+    min-width: 400px;
+    max-width: 400px;
+    background-color: #f5f5f5;
+  }
+  
+  section.race {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  
+  }
+  ul li{
+      text-align: left;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem;
+    width: 100%;
+    background-color: #EF770A;
+  }
+  p{
+    text-align: justify;
+    padding: 6px;
+  }
+  .form {
+    width: 100%;
+  }
+  
+  .form_element {
+    padding: 5px 0px 25px 2px;
+    width: 100%;
+  }
+  

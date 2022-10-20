@@ -1,0 +1,37 @@
+<section class="race">
+  <div class="container">
+    <mat-form-field class="form_input">
+      <input matInput placeholder="Buscar Raza" [(ngModel)]="strBusqueda" name="busqueda" (keyup)="buscarRaza()">
+    </mat-form-field>
+  </div>
+  <mat-card class="card" *ngFor="let item of respuesta">
+    <mat-card-header>
+      <mat-card-title>{{ item.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-chip-list class="mat-chip-list-stacked" aria-orientation="vertical">
+        <mat-chip>Speed:{{ item.capabilities.speed }}</mat-chip>
+        <mat-chip>Size: {{ item.capabilities.size }}</mat-chip>
+      </mat-chip-list>
+      <p><b>Age:</b>{{ item.capabilities.age }}</p>
+      <p><b>Alignment:</b>:{{ item.capabilities.alignment }}</p>
+      <p><b>Size Description:</b>:{{ item.capabilities.size_description }}</p>
+      <mat-divider></mat-divider>
+      <h3>Ability:</h3>
+      <button mat-flat-button *ngFor="let lang of item.capabilities.ability_bonuses" color="accent"
+        matBadgePosition="after above" matBadgeColor="primary" matBadgeOverlap="true">
+        {{ lang.ability_score.name}}
+      </button>&nbsp;
+      <mat-divider></mat-divider>
+      <h3>Language:</h3>
+      <div *ngIf="item.capabilities.language_options != null; else notLanguaje">
+        <button mat-stroked-button *ngFor="let lang2 of item.capabilities.language_options.from.options"  color="primary">
+          {{ lang2.item.index }}
+        </button>
+      </div>
+      <ng-template #notLanguaje>
+        <button mat-stroked-button  color="basic"> Without Language </button>
+      </ng-template>
+    </mat-card-content>
+  </mat-card>
+</section>

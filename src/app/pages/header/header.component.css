@@ -1,0 +1,33 @@
+.toolbar {
+  height: 60px;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: #786AE5;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar a {
+  position: relative;
+  top: 0;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.toolbar span {
+  position: relative;
+  top: -38px;
+  right: 18px;
+}
+
+.toolbar img {
+  position: relative;
+  margin: 5px 20px;
+}
+
+.spacer {
+  flex: 1;
+}
